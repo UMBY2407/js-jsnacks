@@ -3,15 +3,15 @@
     no alla festa.
 */
 
-let listaInvitati = ["Davide", "Marco", "Umberto", "Andrea"];
+let listaInvitati = ["Davide", "Marco", "Umberto", "Andrea", "Nicole", "Alessia", "Cristian"];
 let nomeUtente = prompt("Benvenuto alla festa! Qual'è il tuo nome?");
 let invito;
-for (let i =0; i<4; i++){
+for (let i = 0; i < listaInvitati.length; i++){
     if(nomeUtente == listaInvitati[i]){
-        invito = "Il tuo nome è nella lista!";
+        invito = `${nomeUtente} è nella lista! Benvenuto/a alla festa!`;
         break;
     }else{
-        invito = "Mi spiace, ma il tuo nome non è nella lista!";
+        invito = `Mi spiace, ma ${nomeUtente} non è nella lista!`;
     }
 }
 document.getElementById('output').innerHTML= `${invito}`;
